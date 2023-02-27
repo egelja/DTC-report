@@ -1,0 +1,111 @@
+\documentclass{book}
+
+% Page setup
+\usepackage[letterpaper]{geometry}
+
+% Math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{siunitx}
+\sisetup{uncertainty-mode = separate}
+
+% Images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Links
+\usepackage{hyperref}
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{naturalnames}{hyperref}
+
+% Organization
+\usepackage{import}
+\usepackage{todonotes}
+
+% Change max matrix size
+\setcounter{MaxMatrixCols}{11}
+
+% End of preamble
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGE
+
+\frontmatter
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \huge\textbf{Final Design Report}\\
+		\LARGE{Lorem Ipsum}\\ \todo{Project name?} \leavevmode
+   \end{center}
+   
+   \vspace*{\stretch{2.0}}
+   \large
+   \begin{tabbing}
+	Prepare\=d for:\\
+	\> Dr. Kate Enzler\\
+	\> Alexian Brothers Hospital\\
+	\> Elk Grove Village, Illinois.\\
+	\\
+	Date:\\
+	\> \today\\
+	\\
+	Submitted by:\\
+	\> Madeline Demm, Andrew Li, Nino Maruszewski, Kathryn Welch\\
+	\> Section 1, Team 1\\
+	\\
+	Sponsored By:\\
+	\> Design Thinking and Communication Program\\
+	\> Professors Stacy Wolcott and Laura Pigozzi\\
+	\> McCormick School of Engineering and Applied Science\\
+	\> Northwestern University\\
+	\> Evanston, Illinois 60208\\
+	\end{tabbing}
+	\normalsize
+	\todo{Is the Kate Enzler stuff correct?}
+	\todo{Make sure all names are spelled correctly.}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOC
+
+\listoftodos
+\tableofcontents
+
+\mainmatter
+
+% Main Sections
+\import{./sections/}{intro.tex}
+
+\import{./sections/}{users.tex}
+
+\import{./sections/}{design.tex}
+
+\import{./sections/}{future.tex}
+
+\import{./sections/}{conclusion.tex}
+
+% Appendices
+\appendix
+
+\import{./appendix/}{project_def.tex}
+
+\import{./appendix/}{bom.tex}
+
+\import{./appendix/}{research.tex}
+
+\import{./appendix/}{observations.tex}
+
+\import{./appendix/}{interviews.tex}
+
+\import{./appendix/}{feedback.tex}
+
+\backmatter
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
