@@ -25,14 +25,15 @@ library support.
 
 The MPU6050 is a commonly used gyroscope/accelerometer. It features high
 resolution motion tracking with a built-in Digital Motion Processor to allow for
-high-resolution data capture ($\pm 2g$) with data-processing on chip. This
-allows us to capture high-quality head position data with minimal power draw and
-computing resources on the microcontroller. The MPU6050 is also very small
-(smaller than a fingernail), lightweight (less than \qty{5}{\g}), and affordable
-(costing around \$3 for a development board). And most importantly, it is a very
-easy to use device with excellent library support through I2CDevLib on the
-Arduino framework, allowing us to quickly prototype, test, and iterate on our
-design.
+high-resolution data capture ($\pm 2g$) with data-processing on chip
+\cite{mpu6050}. This allows us to capture high-quality head position data with
+minimal power draw and computing resources on the microcontroller. The MPU6050
+is also very small (smaller than a fingernail), lightweight (less than
+\qty{5}{\g}), and affordable (costing around \$3 for a development board)
+\cite{mpu6050}. And most importantly, it is a very easy to use device with
+excellent library support through I2CDevLib \cite{i2cdevlib} on the Arduino
+Framework \cite{arduino}, allowing us to quickly prototype, test, and iterate
+on our design.
 
 \begin{figure}[h]
   \centering
@@ -45,13 +46,13 @@ design.
 For communication purposes, we decided to use the ESP32 microcontroller from
 Espressif Systems. This microcontroller is relatively small, with a length of 48
 mm, a width of 25 mm, and a height of 11 mm. It supports
-Bluetooth 5.0 (Low Energy) and the $I^2C$ communication protocol, which are needed
-for talking to the phone and MPU6050 (\autoref{sec:mpu6050}), respectively. It
-has two cores that can run at up to 240 MHz, a deep sleep mode for extremely low
-power consumption, and a large online support base to allow for easy
-development. The chip is powerful enough to run a lightweight operating system,
-so we are able to use multiple processes to speed up computation and also save
-energy.
+Bluetooth 5.0 (Low Energy) and the $I^2C$ communication protocol \cite{esp32},
+which are needed for talking to the phone and MPU6050 (\autoref{sec:mpu6050}),
+respectively. It has two cores that can run at up to 240 MHz, a deep sleep mode
+for extremely low power consumption, and a large online support base to allow
+for easy development \cite{esp32}. The chip is powerful enough to run a
+lightweight operating system, so we are able to use multiple processes to speed
+up computation and also save energy.
 
 \begin{figure}[h]
   \centering
@@ -69,8 +70,8 @@ unobtrusiveness, requiring only four wires for inter-device communication. It is
 a synchronous\footnote{All devices agrees on when messages are sent.}
 serial\footnote{Only one message is sent at a time.} communication protocol,
 widely used for attaching low-speed peripheral devices (chips) to a controller
-chip for short-distance communication. Used widely throughout the industry, it
-has great library and device support, with no downsides.
+chip for short-distance communication \cite{i2c}. Used widely throughout the
+industry, it has great library and device support, with no downsides.
 
 Bluetooth Low-Energy was chosen for its lower energy consumption, as our device
 should be able to run for long periods of time while on battery power. While
@@ -80,8 +81,8 @@ consumption is a main requirement of our design, we felt it was a fair
 trade-off.
 
 In the same vein of saving energy, we also will try to use the Deep
-Sleep mode of the ESP32 to reduce power consumption during idle periods to only
-\qty{5}{\uW}.
+Sleep mode of the ESP32 to reduce current consumption during idle periods to only
+\qty{5}{\uA} \cite{esp32}.
 
 %%% Local Variables:
 %%% mode: latex
