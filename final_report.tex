@@ -6,6 +6,9 @@
 % Tables
 \usepackage{array,multirow}
 
+% Colors
+\usepackage[dvipsnames]{xcolor}
+
 % Math symbols
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -14,17 +17,18 @@
 \sisetup{uncertainty-mode = separate}
 
 % Images
+\usepackage{float}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+
+% Organization
+\usepackage{import}
+\usepackage{todonotes}
 
 % Links
 \usepackage{hyperref}
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{naturalnames}{hyperref}
-
-% Organization
-\usepackage{import}
-\usepackage{todonotes}
 
 % Change max matrix size
 \setcounter{MaxMatrixCols}{11}
@@ -104,6 +108,8 @@
 \import{./appendix/}{feedback.tex}
 
 \import{./appendix/}{bom.tex}
+
+\import{./appendix/}{construction.tex}
 
 \backmatter
 

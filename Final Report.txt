@@ -1,0 +1,44 @@
+﻿References
+1. A. F. Ten Brink, J. H. Verwer, J. M. Biesbroek, J. M. A. Visser-Meily, and T. C. W. Nijboer, "Differences between left- and right-sided neglect revisited: A large cohort study across multiple domains," (in eng), J Clin Exp Neuropsychol, vol. 39, no. 7, pp. 707-723, Sep 2017, https://doi.org/10.1080/13803395.2016.1262333.
+2. A. Lim, “Half Of Your World Is Invisible: Hemispatial Neglect,” SPORK!, Oct. 06, 2016. https://www.sporkability.org/spork-exclusive/2016/10/4/half-of-your-world-is-invisible-hemispatial-neglect (accessed Jan. 17, 2023).
+3. D. S. J. Ting et al., "Visual Neglect Following Stroke: Current Concepts and Future Focus," Survey of Ophthalmology, vol. 56, no. 2, pp. 114-134, 2011/03/01/ 2011, doi: https://doi.org/10.1016/j.survophthal.2010.08.001.
+4. R. Gammeri, C. Iacono, R. Ricci, and A. Salatino, "Unilateral spatial neglect after stroke: Current insights," Neuropsychiatr. Dis. Treat., vol. 16, pp. 131-152, 2020/1/10 2020, https://doi.org/10.2147/NDT.S171461.
+5. TactusTherapy, “What is Left Neglect?” https://tactustherapy.com/what-is-left-neglect/ (accessed Jan. 16, 2023).
+6. A. Saj, O. Fuhrman, P. Vuilleumier, and L. Boroditsky, "Patients With Left Spatial Neglect Also Neglect the “Left Side” of Time," Psychological Science, vol. 25, no. 1, pp. 207-214, 2014/01/01 2013, https://doi.org/10.1177/0956797612475222.
+7. K. M. Goedert, J. Y. Zhang, and A. M. Barrett, "Prism adaptation and spatial neglect: the need for dose-finding studies," (in eng), Front Hum Neurosci, vol. 9, p. 243, 2015, https://doi.org/10.3389/fnhum.2015.00243.
+8. ​​TactusTherapy, “Visual Attention Therapy App for Left Neglect on iOS & Android - Cognition.” https://tactustherapy.com/app/vat (accessed Jan. 09, 2023).
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+Instructions for construction
+Follow the schematic listed below. Using a breadboard is easiest, but construction can be done with jumper wires too.
+
+
+[[ SCHEMATIC GOES HERE ITS A PDF ]]
+Instructions for use
+[[ COORDINATE WITH OTHER TEAMS ]]
+
+
+Tentative Instructions
+1. Download the [app name] app by scanning the QR code corresponding to your device
+[A diagram here will include those QR codes. However, for our project, we are unable to create these mobile apps due to (a) time constraints and (b) budgetary constraints.]
+2. Create a user profile on the app
+[Once the design is finalized, a screenshot will be attached here]
+3. Power on the [microcontroller]
+[We need a more user-friendly way to describe, such as “press the power button as shown below” and including a figure. This will be decided once we figure out the FINAL design with other teams. A diagram will be included]
+4. Press “Okay” when your phone prompts you to connect to the microcontroller.
+5. Periodically check your phone to calibrate the microcontroller.
+6. You’re all set!
