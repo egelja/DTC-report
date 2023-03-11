@@ -1,9 +1,22 @@
-
 \chapter{Future Steps}
 \label{chap:future}
 
+There are four directions for future development with regards to [RotaSense]: app, data processing, electronics, and angle detection.
 
-\todo{Write about future steps}
+First, the app can be improved in three ways. One, some of the user interface design can be refined to be more user friendly, as some parts of the design can be confusing, especially for users who are less tech savvy. This improvement is quite straightforward, and requires rethinking some components of the design.
+
+Two, and much more importantly, the account system needs to be rethought completely. Given that this app is a healthcare app, having an account system would require us to process data in accordance with HIPAA laws, which themselves are bundles of red tape. Though, for the sake of patient privacy, these laws ought to be respected. Having an account system means there is an increased chance of patient data leakage. The account system needs to be redesigned to eliminate this possibility, as otherwise there is a lot of grounds for legal action.
+
+Three, the app can be set up to connect with Bluetooth. Due to constraints with Apple development, integrating the prototype app with Bluetooth would require a \$100 Apple Developer License, which exceeds this project’s budget. Instead, we created a Python proof of concept which works on a computer. While this is an okay substitute for now, it is not user-friendly as it requires extensive technical knowledge, making this a huge step for future development. Future development specifically can be done through using the user’s phone’s native Bluetooth library to interact with the microcontroller, which is a process that adds multiple layers of programming on top of what is already complex for a prototype project.
+
+Second, data processing can be improved. As of now, data is sent from the gyroscope microcontroller to the app by creating a ten-number packet (yaw, pitch, roll, acceleration in all three axes, gyroscope movement in all three axes, time). This can be potentially improved by doing more data preprocessing on the microcontroller through applying things like the Fourier transform. More research is needed to decide the best form of data to transmit between controller and device as well as whether a change is necessary.
+
+Third, the electronic components must be refined from the current prototypical form. The current microcontroller-gyroscope system takes up a lot of surface area, and this can be reduced. Reduction of surface area can be done by printing a custom circuit board, which is not overly expensive or complicated. This, however, would only be economically feasible if this product were to be mass produced.
+
+Fourth, the angle-determination algorithm can be refined to be more accurate. Currently, the user will calibrate a gyroscope by using their mobile device, and any subsequent movement will be detected as a movement. However, if the user were to change positions, the gyroscope would need to be recalibrated altogether. A previous idea was to have two gyroscopes, one on the user’s chest area and one on their head, and the difference in angle is the angle of head rotation. Further research needs to be done to determine which angle determination mechanism is the most effective and least intrusive for the patient.
+
+The overall next step is to revise the current design to better promote user autonomy while preserving user privacy. These four ways are not extensive, but are the next steps with regards to improving [PRODUCT NAME].
+
 
 %%% Local Variables:
 %%% mode: latex

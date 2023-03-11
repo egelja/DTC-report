@@ -1,8 +1,25 @@
-
 \chapter{Design Concept and Rationale}
 \label{chap:design}
 
-\todo{Write about the design}
+The \todo{name of design}[[name]] is a device that can track the degree to which the user turns their head and relay this data to the other components of the take-home kit. The [name] is intended to be mounted on the [name of glasses design], and sends data to the mobile app, the glasses and the haptic clip. The design has an accelerometer gyroscope that is able to track how far and how quickly the user is turning their head. This data is processed by the ESP 32 microcontroller, and then relayed to the other components using the communication protocols.
+
+The following sections describe the components of the device—accelerometer/gyroscope, ESP32 microcontroller, and communication protocols—as well as the rationale for each component. 
+
+
+\section{Accelerometer/Gyroscope}
+When creating this device, we needed some way of tracking movement and some way of processing the movement data and communicating it with the app. In order to track the users’ movement, we decided to use a MPU6050 Six-Axis Gyroscope and Accelerometer. This device was chosen due to its simplicity, affordability, and great library support.
+The MPU6050 is a commonly used gyroscope/accelerometer. It features high resolution motion tracking with a built-in Digital Motion Processor to allow for high-resolution data capture (+ – 2g) with data-processing on chip. It is also very small (smaller than a fingernail), lightweight (less than 5 g), and affordable (costing around \$3 for a development board). And most importantly, it is a very easy to use device with great library support through I2CDevLib on the Arduino framework.
+
+\section{ESP 32 Microcontroller}
+For communication purposes, we decided to use the ESP32 microcontroller from Espressif Systems, a battle-tested microcontroller used by hobbyists and professionals alike. Most importantly, it supports Bluetooth 5.0 (Low Energy) and the I2C communication protocol, needed for talking to the phone and MPU6050, respectively. It has two cores that can run at up to 240 MHz, deep sleep mode to lower power consumption, and a large online support base to allow for easy development. And as the chip is powerful enough to run a lightweight operating system, we are able to use multiple processes to speed up computation and also save energy.
+
+\section{Communication Protocols}
+One of the most important components of our design were the communication protocols. The I2C communication protocol was chosen due to its simplicity and unobtrusiveness, requiring only four wires for relatively high-speed communication. Bluetooth Low-Energy was chosen for its lower energy consumption, as our device should be able to run for long periods of time while on battery power. The tradeoff was the added complexity of Bluetooth Low-Energy, but low power consumption is a main requirement of our design. Similarly, we also will try to use the Deep Sleep mode of the ESP32 to reduce power consumption during idle periods to only 5 W.
+
+\todo{INSERT SCHEMATIC HERE}
+
+\todo{CODE WALKTHROUGH?}
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../final_report"
