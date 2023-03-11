@@ -1,14 +1,15 @@
 \chapter{Design Concept and Rationale}
 \label{chap:design}
 
-The RotaSense is a device that can track the degree to which the user turns
-their head and relay this data to the other components of the take-home kit. The
-RotaSense is intended to be mounted on the Blinky (the glasses), and sends data
-to LeftAware (the mobile app), the Blinky and the TheraPulse (the haptic
-clip). The design has an accelerometer gyroscope that is able to track how far
-and how quickly the user is turning their head. This data is processed by the
-ESP 32 microcontroller, and then relayed to the other components using the
-communication protocols.
+The \textit{RotaSense} is a device that can track the degree to which the user
+turns their head and relay this data to the other components of the take-home
+kit. The \textit{RotaSense} is intended to be mounted on the \textit{Blinky} (the
+glasses), and sends data to \textit{LeftAware} (the mobile app), the
+\textit{Blinky} and the \textit{TheraPulse} (the haptic clip). The design has
+an accelerometer gyroscope that is able to track how far and how quickly the
+user is turning their head. This data is processed by the ESP32
+microcontroller, and then relayed to the other components using
+the communication protocols. 
 
 The following sections describe the components of the
 device --- accelerometer/gyroscope, ESP32 microcontroller, and communication
@@ -27,7 +28,7 @@ resolution motion tracking with a built-in Digital Motion Processor to allow for
 high-resolution data capture ($\pm 2g$) with data-processing on chip. This
 allows us to capture high-quality head position data with minimal power draw and
 computing resources on the microcontroller. The MPU6050 is also very small
-(smaller than a fingernail), lightweight (less than 5 g), and affordable
+(smaller than a fingernail), lightweight (less than \qty{5}{\g}), and affordable
 (costing around \$3 for a development board). And most importantly, it is a very
 easy to use device with excellent library support through I2CDevLib on the
 Arduino framework, allowing us to quickly prototype, test, and iterate on our
@@ -80,7 +81,7 @@ trade-off.
 
 In the same vein of saving energy, we also will try to use the Deep
 Sleep mode of the ESP32 to reduce power consumption during idle periods to only
-5 \unit{\uW}. 
+\qty{5}{\uW}.
 
 %%% Local Variables:
 %%% mode: latex
