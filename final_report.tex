@@ -2,6 +2,7 @@
 
 % Page setup
 \usepackage[letterpaper]{geometry}
+\usepackage{indentfirst}
 
 % Tables
 \usepackage{array,multirow}
@@ -83,6 +84,8 @@
 % \listoftodos
 
 \tableofcontents
+\listoffigures
+\listoftables
 
 \mainmatter
 
@@ -100,21 +103,21 @@
 % Appendices
 \appendix
 
-\import{./appendix/}{project_def.tex}
-
 \import{./appendix/}{research.tex}
 
 \import{./appendix/}{interviews.tex}
+
+\import{./appendix/}{project_def.tex}
 
 \import{./appendix/}{observations.tex}
 
 \import{./appendix/}{feedback.tex}
 
-\import{./appendix/}{bom.tex}
-
 \import{./appendix/}{construction.tex}
 
 \import{./appendix/}{use.tex}
+
+\import{./appendix/}{bom.tex}
 
 \backmatter
 

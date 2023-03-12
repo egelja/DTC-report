@@ -13,15 +13,25 @@ the communication protocols.
 
 The following sections describe the components of the
 device --- accelerometer/gyroscope, ESP32 microcontroller, and communication
-protocols --- as well as the rationale for each component.
+protocols --- as well as the rationale for each component. Please see
+\autoref{chap:construction} and \autoref{chap:use} for information on how to
+construct and use the \textit{RotaSense}.
 
 \section{Accelerometer/Gyroscope}\label{sec:mpu6050}
 
 When creating this device, we needed some way of tracking movement and some way
 of processing the movement data and communicating it with the app. In order to
 track the users’ movement, we decided to use a MPU6050 Six-Axis Gyroscope and
-Accelerometer. This device was chosen due to its simplicity, affordability, and
-library support.
+Accelerometer (pictured in \autoref{fig:mpu6050}). This device was chosen due to
+its simplicity, affordability, and library support.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\textwidth]{mpu6050}
+  \caption[MPU6050 Accelerometer/Gyroscope]{The MPU6050 Accelerometer and
+    Gyroscope.}
+  \label{fig:mpu6050}
+\end{figure}
 
 The MPU6050 is a commonly used gyroscope/accelerometer. It features high
 resolution motion tracking with a built-in Digital Motion Processor to allow for
@@ -35,29 +45,25 @@ excellent library support through I2CDevLib \cite{i2cdevlib} on the Arduino
 Framework \cite{arduino}, allowing us to quickly prototype, test, and iterate
 on our design.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.3\textwidth]{mpu6050}
-  \caption{The MPU6050 Accelerometer and Gyroscope.}
-\end{figure}
-
 \section{ESP32 Microcontroller}
 
 For communication purposes, we decided to use the ESP32 microcontroller from
-Espressif Systems. This microcontroller is relatively small, with a length of 48
-mm, a width of 25 mm, and a height of 11 mm. It supports
-Bluetooth 5.0 (Low Energy) and the $I^2C$ communication protocol \cite{esp32},
-which are needed for talking to the phone and MPU6050 (\autoref{sec:mpu6050}),
-respectively. It has two cores that can run at up to 240 MHz, a deep sleep mode
-for extremely low power consumption, and a large online support base to allow
-for easy development \cite{esp32}. The chip is powerful enough to run a
-lightweight operating system, so we are able to use multiple processes to speed
-up computation and also save energy.
+Espressif Systems (pictured in \autoref{fig:esp32}). This microcontroller is
+relatively small, with a length of \qty{48}{\mm}, a width of \qty{25}{\mm}, and
+a height of \qty{11}{\mm}. It supports Bluetooth 5.0 (Low Energy) and the
+$I^2C$ communication protocol \cite{esp32}, which are needed for talking to the
+phone and MPU6050 (\autoref{sec:mpu6050}), respectively. It has two cores that
+can run at up to 240 MHz, a deep sleep mode for extremely low power
+consumption, and a large online support base to allow for easy development
+\cite{esp32}. The chip is powerful enough to run a lightweight operating
+system, so we are able to use multiple processes to speed up computation and
+also save energy.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.3\textwidth]{esp32}
-  \caption{The ESP32 Microcontroller.}
+  \caption[ESP32 Microcontroller]{The ESP32 Microcontroller.}
+  \label{fig:esp32}
 \end{figure}
 
 \section{Communication Protocols}
